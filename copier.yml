@@ -14,3 +14,5 @@ codebase:
 version_control:
     type: bool
     help: "The codebase repository has version control (e.g. git)."
+
+_answers_file: .my-custom-answers.yml
