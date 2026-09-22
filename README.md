@@ -1,6 +1,12 @@
-# _virtual lab name_
-_abstract_
+# {{ project_name or 'Project' }}
 
-### keywords
-- _keyword1_
-- _keyword2_
+{{ description or "Short description goes here." }}
+
+## Checklist
+
+- Development plan: {{ 'Yes' if plan else 'No' }}
+- Timeline: {{ 'Yes' if timeline else 'No' }}
+- Codebase created: {{ 'Yes' if codebase else 'No' }}
+- Version control: {{ 'Yes' if version_control else 'No' }}
+
+_This README is rendered from the template's `copier.yml` answers._
