@@ -1,1 +1,11 @@
-Virtual lab name: {{ project_name }}
+# {{vl-name}}
+
+{{vl-description}}
+
+![images/Ravl_flowchart.png](virtual_lab/documentation/images/Ravl_flowchart.png)
+
+### Keywords
+{% set keywords = vl_keywords.split(',') %}
+{% for keyword in keywords %}
+- {{ keyword.strip() }}
+{% endfor %}

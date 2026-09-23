@@ -19,6 +19,15 @@ vl_abbreviation:
     type: str
     help: What abbreviation would you like for your virtual lab?
 
+vl_description:
+    type: str
+    help: Provide a short description of the scientific objective or research question for which you consider using a virtual research environment.
+
+vl_keywords:
+    type: str
+    help: Provide a list of comma separated keywords that describe your virtual lab.
+    default: "item1, item2, item3"
+
 development_plan:
     type: bool
     help: Do you have a development plan for your project?
@@ -33,3 +42,14 @@ metadata_available:
     help: The virtual lab metadata is available outside the virtual lab.
     default: false
     when: "{{ maturity_level_1 }}"
+
+maturity_level_2:
+    type: bool
+    help: Do you want to go through the maturity level 2 checks?
+    default: false
+
+user_community:
+    type: bool
+    help: Other potential users have been identified.
+    default: false
+    when: "{{ maturity_level_2 }}"
