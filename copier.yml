@@ -22,3 +22,14 @@ vl_abbreviation:
 development_plan:
     type: bool
     help: Do you have a development plan for your project?
+
+maturity_level_1:
+    type: bool
+    help: Do you want to go through the maturity level 1 checks?
+    default: false
+
+metadata_available:
+    type: bool
+    help: The virtual lab metadata is available outside the virtual lab.
+    default: false
+    when: "{{ maturity_level_1 }}"
