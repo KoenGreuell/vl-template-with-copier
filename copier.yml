@@ -31,25 +31,26 @@ vl_keywords:
 development_plan:
     type: bool
     help: Do you have a development plan for your project?
+    default: no
 
 maturity_level_1:
     type: bool
     help: Do you want to go through the maturity level 1 checks?
-    default: false
+    default: no
 
 metadata_available:
     type: bool
     help: The virtual lab metadata is available outside the virtual lab.
-    default: false
+    default: no
     when: "{{ maturity_level_1 }}"
 
 maturity_level_2:
     type: bool
     help: Do you want to go through the maturity level 2 checks?
-    default: false
+    default: no
 
 user_community:
     type: bool
     help: Other potential users have been identified.
-    default: false
+    default: no
     when: "{{ maturity_level_2 }}"
