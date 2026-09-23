@@ -15,7 +15,7 @@ vl_name:
     type: str
     help: What name would you like for your virtual lab?
 
-vl_abbreviaion:
+vl_abbreviation:
     type: str
     help: What abbreviation would you like for your virtual lab?
 
