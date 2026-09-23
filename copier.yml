@@ -1,33 +1,12 @@
-# Questions that copier will ask when generating or updating a project
-
-# Basic project info
+# questions
 project_name:
-  type: str
-  help: "Project name to use in README and metadata"
+    type: str
+    help: What is your project name?
 
-description:
-  type: str
-  help: "Short project description"
+module_name:
+    type: str
+    help: What is your Python module name?
 
-# Checklist booleans
-plan:
-  type: bool
-  help: "There is an ambitious and realistic development plan for the virtual lab."
-
-timeline:
-  type: bool
-  help: "There is a timeline for the co-development, validation of the virtual lab and development of training material."
-
-codebase:
-  type: bool
-  help: "A new virtual lab codebase is created."
-
-version_control:
-  type: bool
-  help: "The codebase repository has version control (e.g. git)."
-
-# You can add `default:` keys to any of the above to avoid prompting when
-# running with `--defaults`. Leaving them out forces interactive prompting
-# unless you pass values explicitly with `-d` / `--data` or with an answers file.
-
-_answers_file: .my-custom-answers.yml
+development_plan:
+    type: bool
+    help: Do you have a development plan for your project?
