@@ -1,11 +1,23 @@
 # questions
-project_name:
+vl_owner_surname:
     type: str
-    help: What is your project name?
+    help: What is the surname of the virtual lab owner?
 
-module_name:
+vl_owner_forename:
     type: str
-    help: What is your Python module name?
+    help: What is the forename of the virtual lab owner?
+
+vl_owner_orcid:
+    type: str
+    help: What is the ORCID of the virtual lab owner?
+
+vl_name:
+    type: str
+    help: What name would you like for your virtual lab?
+
+vl_abbreviaion:
+    type: str
+    help: What abbreviation would you like for your virtual lab?
 
 development_plan:
     type: bool
