@@ -1,0 +1,1 @@
+Virtual lab name: {{ project_name }}
