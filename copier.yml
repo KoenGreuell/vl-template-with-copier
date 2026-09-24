@@ -1,33 +1,6 @@
-# questions
-vl_owner_surname:
-    type: str
-    help: What is the surname of the virtual lab owner?
-
-vl_owner_forename:
-    type: str
-    help: What is the forename of the virtual lab owner?
-
-vl_owner_orcid:
-    type: str
-    help: What is the ORCID of the virtual lab owner?
-
-vl_name:
-    type: str
-    help: What name would you like for your virtual lab?
-
-vl_abbreviation:
-    type: str
-    help: What abbreviation would you like for your virtual lab?
-
-vl_description:
-    type: str
-    help: Provide a short description of the scientific objective or research question for which you consider using a virtual research environment.
-
-vl_keywords:
-    type: str
-    help: Provide a list of comma separated keywords that describe your virtual lab.
-    default: "item1, item2, item3"
-
+---
+!include copier/questions/metadata.yml
+---
 development_plan:
     type: bool
     help: Do you have a development plan for your project?
