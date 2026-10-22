@@ -1,10 +1,41 @@
 # {{vl_name}}
-[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-purple.json)](https://github.com/copier-org/copier)
-
 {{vl_description}}
 
+{% if vl_image -%}
+{% set vl_image_rawgithub = vl_image
+   | replace('https://github.com/', 'https://raw.githubusercontent.com/')
+   | replace('/blob/', '/') -%}
+![{{ vl_image_rawgithub }}]({{ vl_image_rawgithub }})
+{% endif -%}
+
+### Tutorial
+{% if tutorial_available -%}
+A [tutorial](./documentation/tutorial.ipynb) is available in [NaaVRE](https://beta.naavre.net/vreapp) in the documentation folder.
+{% else -%}
+Currently, there is no tutorial available for this virtual lab.
+{% endif -%}
+
 ### Keywords
-{% set keywords = vl_keywords.split(',') %}
-{% for keyword in keywords %}
+{% set keywords = vl_keywords.split(';') -%}
+{% for keyword in keywords -%}
 - {{ keyword.strip() }}
-{% endfor %}
+{% endfor -%}
+
+### Publication(s)
+{% if publications -%}
+{% set publications = publications.split(';') -%}
+{% for publication in publications -%}
+- {{ publication.strip() }}
+{% endfor -%}
+{% endif -%}
+
+### Algorithms
+{% if algorithms -%}
+{% set algorithms = algorithms.split(';') -%}
+{% for algorithm in algorithms -%}
+- {{ algorithm.strip() }}
+{% endfor -%}
+{% endif -%}
+
+### Point of contact
+{{ vl_owner_surname}}, {{vl_owner_forename}} ({{vl_owner_email}})
